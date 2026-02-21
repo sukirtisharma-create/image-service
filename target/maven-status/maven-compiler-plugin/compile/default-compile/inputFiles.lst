@@ -1,5 +1,10 @@
+C:\Users\Admin\Desktop\image-service\src\main\java\com\photo\filters\BlurFilter.java
 C:\Users\Admin\Desktop\image-service\src\main\java\com\photo\security\JwtFilter.java
+C:\Users\Admin\Desktop\image-service\src\main\java\com\photo\filters\FilterRegistry.java
 C:\Users\Admin\Desktop\image-service\src\main\java\com\photo\ImageServiceApplication.java
 C:\Users\Admin\Desktop\image-service\src\main\java\com\photo\security\CorsConfig.java
 C:\Users\Admin\Desktop\image-service\src\main\java\com\photo\security\SecurityConfig.java
+C:\Users\Admin\Desktop\image-service\src\main\java\com\photo\filters\ImageFilter.java
+C:\Users\Admin\Desktop\image-service\src\main\java\com\photo\filters\ResizeFilter.java
+C:\Users\Admin\Desktop\image-service\src\main\java\com\photo\filters\GrayscaleFilter.java
 C:\Users\Admin\Desktop\image-service\src\main\java\com\photo\ImageController.java

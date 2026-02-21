@@ -4,10 +4,14 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.photo.filters.FilterRegistry;
+import com.photo.filters.ImageFilter;
+
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.util.Map;
 import java.awt.image.ConvolveOp;
 import java.awt.Graphics2D;
 import java.awt.image.Kernel;
@@ -15,6 +19,28 @@ import java.awt.image.Kernel;
 @RestController
 @RequestMapping("/image")
 public class ImageController {
+
+
+    @PostMapping(value = "/process", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+public ResponseEntity<byte[]> process(
+        @RequestParam("file") MultipartFile file,
+        @RequestParam String steps,
+        @RequestParam Map<String, String> params) throws IOException {
+
+    BufferedImage image = ImageIO.read(file.getInputStream());
+
+    for (String step : steps.split(",")) {
+        ImageFilter filter = FilterRegistry.get(step.trim());
+        if (filter == null) {
+            throw new IllegalArgumentException("Unknown filter: " + step);
+        }
+        image = filter.apply(image, params);
+    }
+
+    return ResponseEntity.ok()
+            .contentType(MediaType.IMAGE_PNG)
+            .body(toPngBytes(image));
+}
 
    @PostMapping(value = "/grayscale", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
 public ResponseEntity<byte[]> grayscale(@RequestParam("file") MultipartFile file) throws IOException {
