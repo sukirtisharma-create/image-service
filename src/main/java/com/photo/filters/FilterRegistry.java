@@ -11,6 +11,7 @@ public class FilterRegistry {
         filters.put("grayscale", new GrayscaleFilter());
         filters.put("resize", new ResizeFilter());
         filters.put("blur", new BlurFilter());
+        filters.put("rotate", new RotateFilter());
     }
 
     public static ImageFilter get(String name) {

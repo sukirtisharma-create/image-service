@@ -3,6 +3,7 @@ C:\Users\Admin\Desktop\image-service\src\main\java\com\photo\security\JwtFilter.
 C:\Users\Admin\Desktop\image-service\src\main\java\com\photo\filters\FilterRegistry.java
 C:\Users\Admin\Desktop\image-service\src\main\java\com\photo\ImageServiceApplication.java
 C:\Users\Admin\Desktop\image-service\src\main\java\com\photo\security\CorsConfig.java
+C:\Users\Admin\Desktop\image-service\src\main\java\com\photo\filters\RotateFilter.java
 C:\Users\Admin\Desktop\image-service\src\main\java\com\photo\security\SecurityConfig.java
 C:\Users\Admin\Desktop\image-service\src\main\java\com\photo\filters\ImageFilter.java
 C:\Users\Admin\Desktop\image-service\src\main\java\com\photo\filters\ResizeFilter.java
